@@ -29,8 +29,20 @@ Where one of my skills reproduces someone else's text, it says so: `metadata.cre
 ## Install
 
 ```sh
-for s in skills/*/; do ln -sfn "$PWD/$s" ~/.claude/skills/"$(basename "$s")"; done
+./scripts/install.sh
 ```
+
+Links every skill into `~/.claude/skills` (Claude Code) and `~/.agents/skills` (the shared agents directory). `--dry-run` says what it would do and changes nothing; `--target <dir>` points it somewhere else.
+
+It is idempotent, so it is the one command to run after any change to the *set* of skills. It links what is new, repoints what moved, removes the link a rename left behind, and refuses to touch a name it does not own — a real directory, or a link into someone else's skills — reporting those and exiting non-zero, because two skills answering to one name is a silent ambiguity.
+
+Editing a skill needs no re-install: the install is symlinks, so an edit is live in every agent immediately.
+
+### Automatically
+
+The install wires `core.hooksPath` to [`hooks/`](hooks/README.md) on its first run, so `post-merge` and `post-checkout` re-link by themselves: a pull or a branch switch that adds, renames or removes a skill fixes this machine without being asked.
+
+For a machine where this repo is only consumed, not edited, add it to the shell profile or to a `SessionStart` hook in `~/.claude/settings.json` instead.
 
 ## Check
 

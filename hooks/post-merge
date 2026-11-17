@@ -1,0 +1,5 @@
+#!/bin/sh
+# Re-link the skills after a pull: a skill added, renamed or removed upstream
+# would otherwise leave this machine with a missing or dangling name.
+# Editing a skill needs no re-link — the install is symlinks, so edits are live.
+exec "$(git rev-parse --show-toplevel)/scripts/install.sh"
