@@ -1,0 +1,23 @@
+{
+  "name": "my-app",
+  "front": "http://localhost:4200",
+  "locale": "en-US",
+  "widths": [1440, 375],
+  "login": {
+    "type": "form",
+    "urlMatch": "/login|:8180/",
+    "usernameSelector": "#username",
+    "passwordSelector": "#password",
+    "submitSelector": "button[type=submit]",
+    "emailDomain": "example.com",
+    "password": "password",
+    "defaultUser": "admin",
+    "hint": "start the stack as the profile's Launch section says"
+  },
+  "theme": {
+    "storageKey": "theme",
+    "darkClass": "dark",
+    "values": { "light": "light", "dark": "dark" }
+  },
+  "errorPattern": "not found|forbidden|access denied"
+}

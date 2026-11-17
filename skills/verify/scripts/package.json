@@ -1,0 +1,9 @@
+{
+  "name": "verify-harness",
+  "private": true,
+  "type": "module",
+  "description": "Browser harness of the verify skill, installed once next to the skill, outside any project's dependencies.",
+  "dependencies": {
+    "playwright-core": "1.65.0"
+  }
+}
