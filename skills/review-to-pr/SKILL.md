@@ -7,7 +7,7 @@ Review the change, write the description, open the merge request and get its pip
 
 ## 1. Review
 
-Call the Skill tool for `code-review`, which owns the axes, the reviewers and the validation pass. Give it the base the caller named, else let it pin its own, and the agreement (ticket, spec or the user's request) when you have one.
+Call the Skill tool for `review-change`, which owns the axes, the reviewers and the validation pass. Give it the base the caller named, else let it pin its own, and the agreement (ticket, spec or the user's request) when you have one.
 
 A confirmed Agreement or Bugs finding blocks: stop and hand back. Quality findings do not.
 
@@ -15,7 +15,7 @@ Reviewing an existing pull request: show its description after step 2 and stop.
 
 ## 2. Write the description
 
-Call the Skill tool for `pr-writer`, which owns the body template and each section's bar. Give it the change and the validated findings `code-review` reported, and the output path `$TMPDIR/review-to-pr-<branch>.md`.
+Call the Skill tool for `pr-writer`, which owns the body template and each section's bar. Give it the change and the validated findings `review-change` reported, and the output path `$TMPDIR/review-to-pr-<branch>.md`.
 
 A screenshot it could not attach leaves a `<!-- screenshot: <path> -->` placeholder, which step 3.8 hands to the user.
 

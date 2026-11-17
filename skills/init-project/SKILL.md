@@ -4,7 +4,7 @@ description: "Set up a repo for this skill workflow: record which issue tracker 
 disable-model-invocation: true
 ---
 
-Write `docs/agents/issue-tracker.md`, the one file the other skills read to know where a project's specs and tickets live. `spec-griller`, `spec-to-code`, `implement-ticket` and `code-review` all look for it, and fall back to local markdown when it's missing.
+Write `docs/agents/issue-tracker.md`, the one file the other skills read to know where a project's specs and tickets live. `spec-griller`, `spec-to-code`, `implement-ticket` and `review-change` all look for it, and fall back to local markdown when it's missing.
 
 Run this once per repo. Re-run it to correct or extend what it says.
 
@@ -54,4 +54,4 @@ Title format, label vocabulary, who gets assigned, anything a human reviewer exp
 
 ## 3. Tell the user what's next
 
-Say which tracker you recorded and what the repo told you versus what you asked. Then name what this file does not yet cover and could, as the project grows: the QA profile `verify` reads (`.claude/verify/`, which `verify` itself sets up), the project's own run skill, the coding standards `code-review` looks for.
+Say which tracker you recorded and what the repo told you versus what you asked. Then name what this file does not yet cover and could, as the project grows: the QA profile `verify` reads (`.claude/verify/`, which `verify` itself sets up), the project's own run skill, the coding standards `review-change` looks for.

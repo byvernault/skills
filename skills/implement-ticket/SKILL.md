@@ -33,10 +33,10 @@ A visual change also goes through `check-mockup` when the ticket names a mockup.
 
 ## 4. Review and commit
 
-Call the Skill tool with `code-review` to review the work, and fix what it confirms.
+Call the Skill tool with `review-change` to review the work, and fix what it confirms.
 
 Commit to the worktree's branch with the commit convention in `~/.claude/CLAUDE.md`.
 
 ## 5. Hand it over for QA
 
-Leave the stack running and report, in this order: the worktree path, the branch, the URLs with their ports, and the command to start it again. Then say what the start check covered and what `code-review` found.
+Leave the stack running and report, in this order: the worktree path, the branch, the URLs with their ports, and the command to start it again. Then say what the start check covered and what `review-change` found.

@@ -6,4 +6,4 @@ The closing *Why the axes stay apart* follows the same skill's *Why two axes*, e
 
 The rest of this skill — the three axes, the brief, the false-positive list, the validation pass and the re-review path — came from `review-to-pr`, where it was written for this workflow, and moved here so there is one reviewer rather than two.
 
-`code-review` does not depend on Matt's skill: the baseline is copied in rather than pointed at, and this file is the attribution a dependency would otherwise have carried.
+`review-change` does not depend on Matt's skill: the baseline is copied in rather than pointed at, and this file is the attribution a dependency would otherwise have carried.

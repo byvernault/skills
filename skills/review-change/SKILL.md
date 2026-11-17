@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: review-change
 description: "Review a change on three axes — Agreement with the spec or request, Quality against the repo's standards and conventions, and Bugs — with one parallel reviewer per axis, then validate every finding against the code before reporting. Use to review a change, a branch or a pull request, and when another skill needs a change reviewed."
 metadata:
   credits:

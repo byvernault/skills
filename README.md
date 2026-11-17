@@ -10,13 +10,13 @@ My set of skills to develop all my projects.
 | 1 | `spec-griller` | Grills me about a feature until the design is settled, writes the spec, publishes it to the tracker with the `ready-for-agent` label. |
 | 2 | `spec-to-code` | Breaks a spec into a graph of tracer-bullet tickets and implements every one of them, in parallel worktrees, onto one integration branch. |
 | 2′ | `implement-ticket` | One ticket in its own worktree, test-first, left running for QA. |
-| 3 | `code-review` | Reviews a change on three axes (Agreement, Quality, Bugs), one parallel reviewer each, every finding validated against the code. |
+| 3 | `review-change` | Reviews a change on three axes (Agreement, Quality, Bugs), one parallel reviewer each, every finding validated against the code. |
 | 4 | `pr-writer` | Writes the body of the merge request. |
 | 5 | `review-to-pr` | Reviews, writes the description, opens the MR rebased on its target, gets the pipeline green. |
 
 Supporting: `verify` (drives the app in a browser, and owns the start check), `check-mockup` (compares a screen with its mockup), `sonar-fix` (clears a SonarQube quality gate).
 
-Who calls whom: `review-to-pr` → `code-review` → `pr-writer`; `implement-ticket` and `spec-to-code` → `verify` and `code-review`; `verify` → `check-mockup`. A skill called by another skill must stay model-invokable, so `code-review`, `pr-writer`, `verify` and `check-mockup` carry no `disable-model-invocation`.
+Who calls whom: `review-to-pr` → `review-change` → `pr-writer`; `implement-ticket` and `spec-to-code` → `verify` and `review-change`; `verify` → `check-mockup`. A skill called by another skill must stay model-invokable, so `review-change`, `pr-writer`, `verify` and `check-mockup` carry no `disable-model-invocation`.
 
 ## What lives here, and what doesn't
 
