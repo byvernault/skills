@@ -24,7 +24,7 @@ Everything the workflow needs. The repo is self-contained: no skill of mine call
 
 That self-sufficiency is bought with copies. Where a skill of someone else's was needed, it is copied in under a name of my own, credited, and mine to maintain from then on — `grill-design`, `test-first` and `deep-modules` are [Matt Pocock](https://github.com/mattpocock)'s `grilling`, `tdd` and `codebase-design`, word for word. The cost is real and worth naming: an upstream fix no longer reaches me, so each copy is a fork that will drift. The gain is that `spec-griller` cannot lose its interview, and `implement-ticket` cannot lose test-first, because someone else's directory is missing on a new machine.
 
-Every copy says so, in two places: `metadata.credits` in the frontmatter, and a `CREDITS.md` naming what was taken and from where. Seven skills carry one today.
+Every copy says so, in two places: `metadata.credits` in the frontmatter, and a `CREDITS.md` naming what was taken and from where. Seven skills carry one today. The three copied whole are taken under the upstream MIT licence, whose copyright and permission notice travels with each of them in `LICENSE.upstream`, as that licence requires of a copy.
 
 ## Install
 

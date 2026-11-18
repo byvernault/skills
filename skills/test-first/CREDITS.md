@@ -5,3 +5,5 @@ This skill is [Matt Pocock](https://github.com/mattpocock)'s [`tdd`](https://git
 One line changed: where the original reaches for `codebase-design`, this one reaches for [`deep-modules`](../deep-modules/SKILL.md), the copy that lives beside it in this repo.
 
 It is vendored rather than pointed at so this repo stands on its own: `implement-ticket` and `spec-to-code` both call it, and without it they lose test-first entirely. A copy under my own name is mine to maintain; the attribution a dependency would have carried lives here instead.
+
+The copy is made under the upstream MIT licence, whose copyright and permission notice travels with it in [`LICENSE.upstream`](LICENSE.upstream).
