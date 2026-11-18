@@ -51,3 +51,9 @@ python3 scripts/check-skills.py
 ```
 
 Frontmatter, every relative link, and any pointer to a skill that no longer exists. Exits non-zero with the list, so it works as a pre-commit hook or a CI step.
+
+## Licence
+
+[MIT](LICENSE), copyright Benjamin Yvernault.
+
+`grill-design`, `test-first` and `deep-modules` are copies of someone else's MIT-licensed work, as their `CREDITS.md` says; each keeps the upstream copyright and permission notice in its own `LICENSE.upstream`, and that notice governs it rather than the one at the root.
