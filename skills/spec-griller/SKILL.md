@@ -17,7 +17,7 @@ The issue tracker should have been provided to you. If not, read `docs/agents/is
 
 1. Explore the repo to understand the current state of the codebase, unless there is none to explore. Note the domain glossary vocabulary and the ADRs that bind the area you're touching: both constrain the design you're about to grill, and the spec has to speak that vocabulary.
 
-2. Grill the user: call the Skill tool with `grilling`, briefed with the feature and what step 1 found. Let it run until its frontier is empty — a feature the user has already decided in full is the only case for skipping it, and then say so. Facts about the codebase are yours to find, never the user's to supply.
+2. Grill the user: call the Skill tool with `grill-design`, briefed with the feature and what step 1 found. Let it run until its frontier is empty — a feature the user has already decided in full is the only case for skipping it, and then say so. Facts about the codebase are yours to find, never the user's to supply.
 
 3. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better - the ideal number is one.
 

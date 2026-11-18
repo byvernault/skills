@@ -33,7 +33,7 @@ Communication to and from subagents should be sparse. Communicate primarily thro
 
 5. Use **implementer subagents** to implement each ticket, each in its own worktree on its own branch, numbered and ported by the worktree rules in `~/.claude/CLAUDE.md` so several can be started and QA'd at once. Each implementer subagent:
    - confirms its worktree is based on the integration branch before starting, and resets onto it if not;
-   - calls the Skill tool with `tdd` to build the ticket;
+   - calls the Skill tool with `test-first` to build the ticket;
    - merges the integration branch tip into its own branch before reporting done
 
 6. Once an **implementer subagent** completes, merge its work to the integration branch with a **merger subagent**.

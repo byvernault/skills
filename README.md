@@ -14,17 +14,17 @@ My set of skills to develop all my projects.
 | 4 | `pr-writer` | Writes the body of the merge request. |
 | 5 | `review-to-pr` | Reviews, writes the description, opens the MR rebased on its target, gets the pipeline green. |
 
-Supporting: `verify` (drives the app in a browser, and owns the start check), `check-mockup` (compares a screen with its mockup), `sonar-fix` (clears a SonarQube quality gate).
+Supporting: `verify` (drives the app in a browser, and owns the start check), `check-mockup` (compares a screen with its mockup), `sonar-fix` (clears a SonarQube quality gate), and the three called from inside the workflow — `grill-design` (the interview `spec-griller` runs), `test-first` (the red-green loop both implement skills run), `deep-modules` (the vocabulary `test-first` reaches for when an interface's shape is in question).
 
-Who calls whom: `review-to-pr` → `review-change` → `pr-writer`; `implement-ticket` and `spec-to-code` → `verify` and `review-change`; `verify` → `check-mockup`. A skill called by another skill must stay model-invokable, so `review-change`, `pr-writer`, `verify` and `check-mockup` carry no `disable-model-invocation`.
+Who calls whom: `review-to-pr` → `review-change` → `pr-writer`; `spec-griller` → `grill-design`; `implement-ticket` and `spec-to-code` → `test-first`, `verify` and `review-change`; `test-first` → `deep-modules`; `verify` → `check-mockup`. A skill called by another skill must stay model-invokable, so `review-change`, `pr-writer`, `verify` and `check-mockup` carry no `disable-model-invocation`.
 
 ## What lives here, and what doesn't
 
-Only skills I maintain. Someone else's skill stays theirs: installed from their own repo at their own version, never copied in here, so an upstream fix reaches me instead of rotting in a fork.
+Everything the workflow needs. The repo is self-contained: no skill of mine calls a skill it does not ship, so installing this repo is the whole install.
 
-Two of mine call upstream skills that have to be installed separately: `spec-griller` calls `grilling`, and `spec-to-code` and `implement-ticket` call `tdd` — both from [mattpocock/skills](https://github.com/mattpocock/skills).
+That self-sufficiency is bought with copies. Where a skill of someone else's was needed, it is copied in under a name of my own, credited, and mine to maintain from then on — `grill-design`, `test-first` and `deep-modules` are [Matt Pocock](https://github.com/mattpocock)'s `grilling`, `tdd` and `codebase-design`, word for word. The cost is real and worth naming: an upstream fix no longer reaches me, so each copy is a fork that will drift. The gain is that `spec-griller` cannot lose its interview, and `implement-ticket` cannot lose test-first, because someone else's directory is missing on a new machine.
 
-Where one of my skills reproduces someone else's text, it says so: `metadata.credits` in the frontmatter, and a `CREDITS.md` naming what was copied and from where. Four skills carry one today.
+Every copy says so, in two places: `metadata.credits` in the frontmatter, and a `CREDITS.md` naming what was taken and from where. Seven skills carry one today.
 
 ## Install
 

@@ -21,7 +21,7 @@ Already working in a worktree the user put you in: keep it, and take its slot's 
 
 ## 2. Build it
 
-Call the Skill tool with `tdd` where possible, at the seams the spec or ticket already agreed. Where the spec named no seam, agree one with the user before writing the first test.
+Call the Skill tool with `test-first` where possible, at the seams the spec or ticket already agreed. Where the spec named no seam, agree one with the user before writing the first test.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 

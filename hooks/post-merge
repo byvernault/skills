@@ -1,5 +1,15 @@
 #!/bin/sh
-# Re-link the skills after a pull: a skill added, renamed or removed upstream
-# would otherwise leave this machine with a missing or dangling name.
-# Editing a skill needs no re-link — the install is symlinks, so edits are live.
+# Re-link the skills: a skill added, renamed or removed upstream would
+# otherwise leave this machine with a missing or dangling name. Editing a
+# skill needs no re-link — the install is symlinks, so edits are live.
+#
+# Does nothing while a rebase, merge, cherry-pick or bisect is in flight. Those
+# check out intermediate commits, and linking one of them leaves the install
+# describing a tree that is about to be replaced. post-rewrite runs at the end
+# of a rebase, which is where that case is caught.
+git_dir=$(git rev-parse --git-dir) || exit 0
+for state in rebase-merge rebase-apply MERGE_HEAD CHERRY_PICK_HEAD REVERT_HEAD BISECT_LOG; do
+  [ -e "$git_dir/$state" ] && exit 0
+done
+
 exec "$(git rev-parse --show-toplevel)/scripts/install.sh"
