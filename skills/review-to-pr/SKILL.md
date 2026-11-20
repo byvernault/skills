@@ -9,7 +9,7 @@ Review the change, write the description, open the merge request and get its pip
 
 Call the Skill tool for `review-change`, which owns the axes, the reviewers and the validation pass. Give it the base the caller named, else let it pin its own, and the agreement (ticket, spec or the user's request) when you have one.
 
-A confirmed Agreement or Bugs finding blocks: stop and hand back. Quality findings do not.
+A finding `review-change` says blocks (Agreement, Bugs, `data-loss`, `compliance`) stops here: hand back. A blocking finding is never moved to a follow-up section of the description.
 
 Reviewing an existing pull request: show its description after step 2 and stop.
 
